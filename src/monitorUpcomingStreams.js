@@ -55,6 +55,7 @@ function monitorUpcomingStreams() {
     }
     return {
       id: videoInfo.id,
+      title: videoInfo.snippet.title,
       scheduledStartTime,
       uploadStatus,
     };
@@ -105,9 +106,9 @@ function monitorUpcomingStreams() {
         break;
     }
     postText += "\n\n";
-    postText += title + "\n";
-    postText += "youtu.be/" + parsedVideoId + "\n";
-    postText += "開始予定日時：" + scheduledStartTime;
+    postText += videoInfo.title + "\n";
+    postText += "youtu.be/" + videoInfo.id + "\n";
+    postText += "開始予定日時：" + videoInfo.scheduledStartTime;
     // ポストする
     console.log("postText: " + postText);
     sendPost(postText);
