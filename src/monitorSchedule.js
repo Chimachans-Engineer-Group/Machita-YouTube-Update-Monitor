@@ -13,6 +13,7 @@ function monitorSchedule() {
   }
   // 作成日時で昇順にソート
   files.sort((a, b) => a.getDateCreated() - b.getDateCreated());
+  console.log("files: " + JSON.stringify(files.map((f) => f.getName())));
 
   // UrlFetchAppで画像URLにリクエストし、画像ファイルを取得
   const currentBlob = UrlFetchApp.fetch(imageUrl).getBlob();
