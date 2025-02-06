@@ -55,6 +55,6 @@ function monitorSchedule() {
   }
 
   // ポストする
-  const postText = `スケジュールが更新されました https://www.youtube.com/live/${videoId}`;
+  const postText = `Weekly Scheduleが更新されました（${currentDate}） https://www.youtube.com/live/${videoId}`;
   sendPost(postText);
 }
