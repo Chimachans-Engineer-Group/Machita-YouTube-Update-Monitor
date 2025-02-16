@@ -10,11 +10,6 @@
     ],
     "enabledAdvancedServices": [
       {
-        "userSymbol": "Drive",
-        "version": "v3",
-        "serviceId": "drive"
-      },
-      {
         "userSymbol": "YouTube",
         "version": "v3",
         "serviceId": "youtube"
