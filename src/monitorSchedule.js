@@ -48,10 +48,10 @@ function monitorSchedule() {
   console.log("newFileId: " + newFileId);
 
   // 古い画像が
-  while (files.length >= fileToCompareNum) {
+  while (files.length > fileToCompareNum) {
     // 存在するとき、削除する
     const oldFile = files.shift();
-    Drive.Files.remove(oldFile.getId());
+    oldFile.setTrashed(true);
   }
 
   // ポストする
