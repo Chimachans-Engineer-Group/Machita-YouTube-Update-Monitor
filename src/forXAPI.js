@@ -151,6 +151,6 @@ function sendPost(text) {
  * テストポストする
  */
 function testPost() {
-  text = new Date() + "テスト";
+  text = new Date() + "テストです";
   sendPost(text);
 }
