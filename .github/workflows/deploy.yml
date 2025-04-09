@@ -33,7 +33,7 @@ jobs:
         # 認証情報を保存
         run: |
           echo $CLASP_TOKEN > ~/.clasprc.json
-          echo $CLASP > ~/.clasp.json
+          echo $CLASP > .clasp.json
 
       - name: Deploy
         run: |
