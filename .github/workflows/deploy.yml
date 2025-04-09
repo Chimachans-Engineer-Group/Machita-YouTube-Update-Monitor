@@ -28,10 +28,12 @@ jobs:
       - name: Authorize Clasp
         env:
           CLASP_TOKEN: ${{ secrets.CLASP_TOKEN }} # GitHub Secrets からトークンを取得
+          CLASP: ${{ secrets.CLASP }}
 
         # 認証情報を保存
         run: |
           echo $CLASP_TOKEN > ~/.clasprc.json
+          echo $CLASP > ~/.clasp.json
 
       - name: Deploy
         run: |
