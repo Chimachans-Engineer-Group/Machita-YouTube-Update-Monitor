@@ -3,7 +3,7 @@ function monitorSchedule() {
   const imageUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
   const folderId = PropertiesService.getScriptProperties().getProperty("FOLDER_ID");
   const folder = DriveApp.getFolderById(folderId);
-  const fileToCompareNum = 2;
+  const fileToCompareNum = 3;
 
   // フォルダ内のファイルをすべて取得
   const files = [];
